@@ -1,14 +1,14 @@
 import Head from 'next/head'
 
 export default function HeadObject({children}) {
-    const title = "The Perfect Next.js Theme";
-    const description = "This is the perfect Next.js theme that you should use instead of create-next-app.";
+    const title = "dash";
+    const description = "a small personal dashboard made to run on an old kindle, built with next.js, tailwind, and notion api";
     const searchBarColor = "#ffffff"; // This is your Safari 15 Search Bar Color in Light Mode
     //const darkSearchBarColor = "#000000"; // This is your Safari 15 Search Bar Color in Dark Mode (optional)
-    const keywords = "put some fun keywords here";
-    const author = "Sarthak Mohanty";
-    const twitter = "@sarthaktexas";
-    const url = "http://localhost:3000"; // This is your og:url or domain (optional but recommended)
+    const keywords = "notion, dashboard, todo, list";
+    const author = "Jason Antwi-Appah";
+    const twitter = "@jasonaa_";
+    const url = "https://d.jasonaa.me"; // This is your og:url or domain (optional but recommended)
     //const image = "/ogimage.png"; // This is your OpenGraph image
     return (
         <Head>
