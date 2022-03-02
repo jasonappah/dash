@@ -4,7 +4,7 @@ import { DateTime } from "luxon";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { timeOfDay } from "../lib/util";
 import { Item } from "../components/Item";
-const REEVAL_SECS = 10;
+const REEVAL_SECS = 60;
 
 export default function Home(props) {
   const { data, error, isValidating } = useSWR("/api/list", {

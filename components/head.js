@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-export default function HeadObject({children}) {
+export default function HeadObject() {
     const title = "dash";
     const description = "a small personal dashboard made to run on an old kindle, built with next.js, tailwind, and notion api";
     const searchBarColor = "#ffffff"; // This is your Safari 15 Search Bar Color in Light Mode
@@ -30,7 +30,6 @@ export default function HeadObject({children}) {
             <meta name="twitter:site" content={twitter} />
             <meta name="twitter:creator" content={twitter} />
             {/* Add analytics here */}
-            {children}
         </Head>
     )
 }

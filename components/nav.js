@@ -18,7 +18,7 @@ export default function Nav() {
         <CgDarkMode size={24} />
       </button>
       <a href="https://github.com/jasonappah/dash">Source</a>
-      <a href={`https://notion.so/${process.env.NEXT_PUBLIC_NOTION_DB_ID}`}>Notion</a>
+      {process.env.NEXT_PUBLIC_NOTION_DB_ID && <a href={`https://notion.so/${process.env.NEXT_PUBLIC_NOTION_DB_ID}`}>Notion</a>}
     </nav>
   );
 }

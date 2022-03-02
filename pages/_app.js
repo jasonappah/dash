@@ -7,9 +7,9 @@ import Nav from "../components/nav";
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider enableSystem="true" attribute="class">
+      <HeadObject />
       <SWRConfig value={{ fetcher }}>
         <div className="transition ease-in-out dark:text-white light:text-black">
-          <HeadObject />
           <Nav />
           <Component {...pageProps} />
         </div>

@@ -1,6 +1,6 @@
 # dash
 
-A simple personal dashboard built with Next.js + Tailwind CSS and backed by my Notion tasks database.
+A simple personal dashboard built with Next.js + Tailwind CSS and backed by my Notion tasks database and TickTick to-do list (TickTick code adapted from [its Raycast extension](https://github.com/raycast/extensions/tree/main/extensions/ticktick/src/service)).
 
 ![A screenshot of a simple web page with a table of to do list items](screenshot.png)
 
@@ -18,4 +18,7 @@ I still want to get this to run on an e-ink display of some sort, ideally withou
 - Make a simpler version of the site using mostly vanilla JS
   - This might be a good option but also like, idk what browser APIs I can and can't use on the Kindle, plus there's still the chance I run into the same issues I encountered with this site
   - Overall I don't think it'd be as fun as building a TUI so I think I'll just do that instead
-  
+
+## March 2022 update
+
+Surprise surprise - I haven't done any of the things I said I would. I did update dash to add support for TickTick since I've switched to that for to-dos. dash runs on my personal machine now instead of on a server on my Tailnet, since my school wifi doesn't seem to like me being on Tailscale all the time :/ I also set dash as my new tab page ~~so i can be called out aboonut late tasks when im about to procrastinate~~. The TickTick code is kinda wack since I was too lazy to refactor stuff to make it less dependent on Notion, so I'll probably want to refactor that at some point. But that's a problem for future me 🥱

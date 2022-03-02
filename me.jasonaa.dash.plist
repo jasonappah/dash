@@ -1,0 +1,26 @@
+<!-- Move this file to ~/Library/LaunchAgents, and it should automatically run once you logout and back in again  -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>me.jasonaa.dash</string>
+    <key>ProgramArguments</key>
+    <array>
+       <string>yarn</string>
+       <string>--cwd</string>
+       <string>/Users/json/Documents/src/jasonappah/dash</string>
+       <string>run</string>
+       <string>start</string>
+       <string>--port</string>
+       <string>9210</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/Users/json/Documents/src/jasonappah/dash/launchd-stdout.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/json/Documents/src/jasonappah/dash/launchd-stderr.log</string>
+  </dict>
+</plist>
