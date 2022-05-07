@@ -36,7 +36,7 @@ export default function Home(props) {
           {
             data.list.filter(
               (item) =>
-                DateTime.now() - DateTime.fromISO(item.Due.date.start) > 0 &&
+                DateTime.now() - DateTime.fromISO(item?.Due?.date?.start || -1) > 0 &&
                 item?.Status?.select?.name !== "Complete"
             ).length
           }{" "}
