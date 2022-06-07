@@ -12,7 +12,7 @@
   "dependencies": {
     "@notionhq/client": "^0.4.13",
     "@upstash/redis": "^1.6.1",
-    "framer-motion": "^4.1.17",
+    "framer-motion": "^6.3.10",
     "luxon": "^2.3.1",
     "next": "^12.1.0",
     "next-themes": "^0.0.15",
