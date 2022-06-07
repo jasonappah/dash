@@ -1,6 +1,7 @@
 import { Client } from "@notionhq/client";
-const { NOTION_TOKEN, NEXT_PUBLIC_NOTION_DB_ID } = process.env;
+const { NOTION_TOKEN, NEXT_PUBLIC_NOTION_DB_ID, UPSTASH_REDIS_REST_URL, UPSTASH_REDIS_REST_TOKEN } = process.env;
 import { getNext7Days } from "./ticktick/osScript";
+import { Redis } from '@upstash/redis'
 
 const notion = new Client({
   auth: NOTION_TOKEN,
@@ -56,7 +57,20 @@ export async function getTickTickTasks() {
 
 export async function getEntries() {
   const promises = [getNotionEntries()];
-  if (process.env.USE_TICKTICK) promises.push(getTickTickTasks())
+  // if (Object.keys(process.env).includes("TICKTICK_CLIENT_ID")) {
+  //   const redis = new Redis({
+  //     url: UPSTASH_REDIS_REST_URL,
+  //     token: UPSTASH_REDIS_REST_TOKEN
+  //   })
+  //   const token = await redis.get<string>('dash:ticktick_access');
+  //   if (!token) {
+      
+  //   }
+  //   const projectId = ""
+  //   const req = await fetch(`https://api.ticktick.com/open/v1/project/${projectId}`)
+  //   console.log()
+  
+  // }
   const [notion, ticktick] = await Promise.all(promises)
   return [...ticktick||[], ...notion]
 }
