@@ -10,7 +10,7 @@
     "ye": "pm2 start 'next start --port 9210'"
   },
   "dependencies": {
-    "@notionhq/client": "^0.4.13",
+    "@notionhq/client": "^2.0.0",
     "@upstash/redis": "^1.6.1",
     "framer-motion": "^4.1.17",
     "luxon": "^2.3.1",
